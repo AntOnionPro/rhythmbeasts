@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHYTHM BEASTS</title>
+    <link rel="icon" href="assets/Union.svg" type="img/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#top">
+                <img class="logo-nav" src="assets/imagotipo_horizontal_white.svg" alt="Rhythm Beasts">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="right collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sinopsis">Sinopsis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#estilo">Estilo Visual</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Modo de Juego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Acerca de</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="preview" id="top">
+        <canvas id="gameplayLoop"></canvas>
+        <div class="stage-meta">
+            <div><span id="bpmLabel">126</span> bpm &middot; <span id="secLabel">calma</span></div>
+            <div>compás <b id="barLabel">1</b></div>
+        </div>
+        <button id="soundToggle" class="sound-toggle" type="button">Activar sonido</button>
+        <div class="scroll-indicator" aria-hidden="true">&#8595;</div>
+        <div class="hero-fade" aria-hidden="true"></div>
+        <audio id="cancion" src="assets/cancion.mp3" loop preload="auto"></audio>
+    </section>
+
+    <section class="panel panel--cyan" id="sinopsis">
+        <div class="panel-inner">
+            <p class="panel-index">01</p>
+            <h2 class="panel-title">Sinopsis</h2>
+            <div class="panel-body">
+                <p class="lead">Eres el vacío en el centro del compás. Todo lo que suena viene hacia ti.</p>
+                <p>Las bestias no se derrotan a golpes: se desarman a tiempo. Cada una canta, y cada canto se convierte en proyectiles que entran desde el borde de la pantalla. Tu única defensa es el parry, y el parry solo existe en el instante exacto del beat.</p>
+                <p>Fallar no te quita vida de inmediato. Fallar rompe la cadena, y la bestia recupera terreno. La partida se gana sosteniendo el ritmo más tiempo del que la bestia puede sostener el suyo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel panel--mint" id="estilo">
+        <div class="panel-inner">
+            <p class="panel-index">02</p>
+            <h2 class="panel-title">Estilo Visual</h2>
+            <div class="panel-body">
+                <p class="lead">Negro absoluto, cinco colores, cero decoración inútil.</p>
+                <p>Cada tecla tiene un color y un sector del círculo. No hay iconografía que memorizar: el color te dice qué tocar y el ángulo te dice desde dónde viene. El fondo no es un adorno, es un instrumento más — se tiñe con el color de los parrys que acabas de acertar y respira con el bombo.</p>
+                <ul class="swatches">
+                    <li><span class="dot" style="--c:#4de8e0"></span>D</li>
+                    <li><span class="dot" style="--c:#6fffb0"></span>F</li>
+                    <li><span class="dot" style="--c:#ffe14d"></span>Espacio</li>
+                    <li><span class="dot" style="--c:#ff3dae"></span>J</li>
+                    <li><span class="dot" style="--c:#b06bff"></span>K</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <img class="logo-footer" src="assets/imagotipo_horizontal_white.svg" alt="Rhythm Beasts">
+        <p>&copy; 2026 Rhythm Beasts</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/gameplay-loop.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>
